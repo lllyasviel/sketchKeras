@@ -1,5 +1,5 @@
 # sketchKeras
-An u-net with some algorithm to take sketch from paints.
+An u-net with some algorithm to take the sketch from a painting.
 
 # requirement
 * Keras
@@ -17,12 +17,12 @@ Here is a example of artificial sketch for reference.
 
 ![goal](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/github/example.png)
 
-Here a conclusion of existing methods to handle the problem.
-* use opencv and implements a high-pass effect to get edge
-* train a nerual network (HED Edge Detect)(PaintsChainer's lnet)
-* use this sketchKeras which combined algorithm and nerual networks
+Here is a conclusion of existing methods to handle this problem.
+* use **opencv** and implement a high-pass effect to get the edge
+* train a nerual network (HED Edge Detect)/(**PaintsChainer's lnet**)
+* use this **sketchKeras** which combined algorithm and nerual networks
 
-Take this pic as an example (get from internet and I am finding the author.)
+Take this pic as an example *(Picture is from internet and I am finding the author.)*
 
 ![pic](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/test1/raw.jpg)
 
@@ -30,16 +30,16 @@ If we use the high-pass algorithm via opencv or something else, we may get this 
 
 ![pic](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/test1/opencv.jpg)
 
-As we can see, the result is far from artificial sketch. To achieve better performance, we may modify the parameters and enhance the pic, then this one:
+As we can see, the result is far from artificial sketch. To achieve better performance, we may modify the parameters and enhance the pic, then it comes this one:
 
 ![pic](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/test1/opencv_enhanced.jpg)
 
-The result is still not good. People like to add shadow to their drawing by add dense lines and these lines or points will become noise and disturb the high-pass algorithm. It is apprent that we can modify the parameters or use denoise methods to improve these, but drawings differ from one another and it is impossible to handle these automatically.
+The result is still not good. People like to add shadow to their drawing by add dense lines or points and these will become noise and disturb the high-pass algorithm. It is apprent that we can modify the parameters or use denoise methods to improve it, but drawings differ from one another and it is impossible to handle these automatically.
 
 Then let us try the **lnet of PaintsChainer** (similar to HED)
 
 ![pic](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/test1/paintsChainer_lnet.jpg)
-d
+
 The result from nerual networks looks different from those from algorithm. However, this is still not so good.
 The author of PaintsChainer use threslod to avoid noise and normalize the line, as this:
 
@@ -49,7 +49,7 @@ In this picture, we can see clearly that the noise, espeacilly near eyes and in 
 
 ![pic](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/github/example.jpg)
 
-eAs we can see, though the picture is denoised by "threslod", it differs far from real artificial sketch. So it remains much improvement place in paintsChainer.
+As we can see, though the picture is denoised by "threslod", it differs far from real artificial sketch. So it remains much improvement place in paintsChainer.
 
 Finally, let us see the result of sketchKeras:
 
