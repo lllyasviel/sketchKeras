@@ -39,7 +39,7 @@ The result is still not good. People like to add shadow to their drawing by add 
 Then let us try the **lnet of PaintsChainer** (similar to HED)
 
 ![pic](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/test1/paintsChainer_lnet.jpg)
-
+d
 The result from nerual networks looks different from those from algorithm. However, this is still not so good.
 The author of PaintsChainer use threslod to avoid noise and normalize the line, as this:
 
@@ -49,7 +49,7 @@ In this picture, we can see clearly that the noise, espeacilly near eyes and in 
 
 ![pic](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/github/example.jpg)
 
-As we can see, though the picture is denoised by "threslod", it differs far from real artificial sketch. So it remains much improvement place in paintsChainer.
+eAs we can see, though the picture is denoised by "threslod", it differs far from real artificial sketch. So it remains much improvement place in paintsChainer.
 
 Finally, let us see the result of sketchKeras:
 
@@ -76,7 +76,7 @@ opencv and high-pass (all detail and noise remained so it is not suitable for tr
 
 ![pic](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/test2/opencv.jpg)
 
-opencv and high-pass enhanced (still not so good and we can see the pic is going to become a grayscaled detail pic but not a sketch)
+opencv and high-pass enhanced (still not so good and we can see the pic is going to become a grayscaled detailed pic but not a sketch)
 
 ![pic](https://raw.githubusercontent.com/lllyasviel/sketchKeras/master/test2/opencv_enhanced.jpg)
 
